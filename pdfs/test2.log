@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2011.7.3)  7 APR 2012 22:48
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (TeX Live 2011) (format=xelatex 2011.7.3)  7 APR 2012 23:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -690,7 +690,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Here is how much of TeX's memory you used:
  11520 strings out of 494150
  200612 string characters out of 3152950
- 273081 words of memory out of 3000000
+ 273090 words of memory out of 3000000
  14633 multiletter control sequences out of 15000+200000
  6681 words of font info for 44 fonts, out of 3000000 for 9000
  1018 hyphenation exceptions out of 8191
