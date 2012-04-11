@@ -1,0 +1,32 @@
+require 'date'
+require 'rujitsu'
+require 'active_support/core_ext/integer/inflections'
+
+def rsync location
+  exec %{rsync -glpPrtvz -e "ssh" --exclude=".git" "#{Dir.pwd}/output/" #{location}}
+end
+  
+task "deploy" do
+  rsync "martin@direct.braindetour.com:/home/martin/artificialimagination.co.uk"
+end
+
+task "create_post" do
+  title = ENV['title']
+  path = "content/#{Date.today.year}/#{Date.today.strftime "%m"}"
+  file = "#{path}/#{title.to_url}.html"
+  `mkdir -p #{path}`
+  `touch #{file}`  
+  content = %{---
+title: "#{title}"
+kind: article
+layout: post
+categories:
+- 
+tags:
+- 
+created_at: #{Date.today.strftime "#{Date.today.day.ordinalize} %B %Y"}
+author: James
+---
+}
+  `echo "#{content}" >> #{file}`
+end
